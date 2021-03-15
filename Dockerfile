@@ -1,4 +1,5 @@
 FROM nginx:1.19.6
+COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 WORKDIR /app
 RUN chown -R nginx:nginx /app && chmod -R 755 /app && \
